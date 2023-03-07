@@ -5,7 +5,7 @@ using UnityEngine;
 public class Driver : MonoBehaviour
 {
     [SerializeField] float steerSpeed = 300f;
-    [SerializeField] float moveSpeed = 20f;
+    [SerializeField] float moveSpeed = 15f;
     // public SpriteRenderer spriteRenderer;
     // public Vector3 setPosition;
 
@@ -24,6 +24,11 @@ public class Driver : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.tag == "Boost")
+        {
+            moveSpeed = 35f;
+            steerSpeed = 500f;
+        }
         if(other.tag == "HighRoad")
         {
             Vector3 position = transform.position;
