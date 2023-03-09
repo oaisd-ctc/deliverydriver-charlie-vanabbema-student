@@ -13,6 +13,8 @@ TagManager:
   - LowRoad
   - Customer
   - Boost
+  - smallroad
+  - BIGROAD
   layers:
   - Default
   - TransparentFX
